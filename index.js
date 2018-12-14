@@ -3,10 +3,17 @@ var Word = require("./Word.js");
 var inquirer = require('inquirer');
 var possibleWordsToGuess = ["one", "two", "three","excess","success","exceed"];
 
+
 //var rand = myArray[Math.floor(Math.random() * myArray.length)];
+
+var guesses;
 
 var targetWord = possibleWordsToGuess[Math.floor(Math.random()*possibleWordsToGuess.length)];
 console.log("targetWord is "+ targetWord);
+
+Word.LettersArray=targetWord.split("");
+
+guesses=targetWord.length+3;
 
 
 inquirer
@@ -18,7 +25,15 @@ inquirer
     ])
     .then( function(answers)  {
         // Use user feedback for... whatever!!
-        console.log(answers.letterGuessed); ///pass it to func in word.js  which then sends it to letter.js....
+        console.log
+        (answers.letterGuessed); 
+        
+        var theLetter=answers.letterGuessed;
+
+        Word.processGuess(theLetter);
+        guesses--;
+        
+        ///pass it to func in word.js  which then sends it to letter.js....
         ///dont return from asynch funcs/promises b/c it nests promises...
     });
 

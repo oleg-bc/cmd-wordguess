@@ -34,10 +34,9 @@ function Letter(letterBeingGuessed){
         return wasGuessed;
         //check the target word array
         // if was guessedCorrectly bool to true
-    };
-    
+    };  
 }
-
+module.exports=Letter;
 ///test
 // var aLetter = new Letter("a");
 // var sLetter = new Letter("s");
@@ -56,7 +55,7 @@ function Letter(letterBeingGuessed){
 ///test ends
 
 
-module.exports=Letter;
+
 //aLetter.word="success";
 // var aLetter = "a";
 // var sLetter = "s";
