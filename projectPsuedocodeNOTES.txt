@@ -1,0 +1,34 @@
+/* FROM WORD
+{
+    guessedWord : "chosen from generateWordfunc()",
+    
+    wordArray : "this is the word array that contains all the possible words from which to chose target..."
+    
+    generateWordfunc : math.random()...chooses word from word array and stores it in guessedWord property 
+} 
+
+//FROM INDEX
+
+    // type: (String) Type of the prompt. Defaults: input - Possible values: input, confirm, list, rawlist, expand, checkbox, password, editor
+    // name: (String) The name to use when storing the answer in the answers hash. If the name contains periods, it will define a path in the answers hash.
+    // message: (String|Function) The question to print. If defined as a function, the first parameter will be the current inquirer session answers. Defaults to the value of name (followed by a colon).
+
+
+    from letter jS
+
+
+    
+
+{
+    guessedAnswers: [] // array of guessedLetters (.push recent guess to array access by array.lengthp-1) << most recent guess,
+
+    word : "the target word",
+
+    compareLettter : function(){checks if letter is in word
+    access the word and compare if guess letter is there...(if yes (action) else (other action))}
+
+}
+
+
+*/
+
