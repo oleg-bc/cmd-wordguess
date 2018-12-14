@@ -1,43 +1,32 @@
-function Letter(letterBeingGuessed){
-    //q:1 should the letter get word as arg??
-    //var stringUnderlyingChar, boolGuessed;
-    
+function Letter(letterBeingGuessed) {
     this.wasGuessed = false;
-    //this.word = word;
-    //var word = "success";
-    this.guessedLetters = [];  
-    
-    this.letterBeingGuessed=letterBeingGuessed;
-    ///q:2  1st letter function -- reqmt reads like it should NOT accept an arg - is that correct???
-    //q:3 can this work without word???
-    this.checkGuessDisplayChar = function(){
-        if (this.wasGuessed)
-        { 
-            stringUnderlyingChar=letterBeingGuessed;
+    this.guessedLetters = [];
+    this.letterBeingGuessed = letterBeingGuessed;
+    this.checkGuessDisplayChar = function () {
+        if (this.wasGuessed) {
+            stringUnderlyingChar = letterBeingGuessed;
             return letterBeingGuessed;
-        }   
-        else 
-        {
+        }
+        else {
             stringUnderlyingChar = "_";
             return letterBeingGuessed;
         }
-        
     };
-    // A function that takes a character as an argument and checks it against the underlying character, updating the stored boolean value to true if it was guessed correctly
-    this.checkGuessLogic = function(char){
-        if (char===letterBeingGuessed){
-        wasGuessed=true;
+    this.checkGuessLogic = function (char) {
+        if (char === letterBeingGuessed) {
+            wasGuessed = true;
         }
-        else{
-            wasGuessed=false;
+        else {
+            wasGuessed = false;
         }
         return wasGuessed;
-        //check the target word array
-        // if was guessedCorrectly bool to true
-    };  
+    };
 }
-module.exports=Letter;
+module.exports = Letter;
 ///test
+//this.word = word;
+    //var word = "success";
+
 // var aLetter = new Letter("a");
 // var sLetter = new Letter("s");
 

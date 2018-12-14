@@ -1,5 +1,7 @@
 var Letter = require("./Letter.js");
-function Word() {
+var currentLetter;
+currentLetter = new Letter();
+function Word(stringArg) {
     var lettersArray = [];//req1
     this.stringWord = function () {
         var strWrd;
@@ -11,12 +13,10 @@ function Word() {
         return strWrd;
         console.log(strWrd);
     }
-    //req 2
-    
     this.processGuess = function (charArg) {
-        Letter.checkGuessLogic(charArg);        //if guessed right - call - letter.displayLetter
+        currentLetter.checkGuessLogic(charArg);        //if guessed right - call - letter.displayLetter
 
-        Letter.checkGuessDisplayChar();//if guessed wrong  - call- letter.displayUnderscore
+        currentLetter.checkGuessDisplayChar();//if guessed wrong  - call- letter.displayUnderscore
         //return targetWord;
     }
 
